@@ -168,7 +168,26 @@ export default async function retrieveAirQualityData(
       //console.log(`city: ${city.city} number: ${sensorArray.length}`);
     });
 
-    sensorDataByCity.forEach(function (cityRec: any) {
+    // NEED TO FIX SENSORDATA TO 1 REC
+    let sensorDataByCityFixed = [];
+    for (let i=0;i<sensorDataByCity.length;i++) {
+
+      const cityData = sensorDataByCity[i];
+      const citySensorsSorted = sensorDataByCity[i].sensors.sort((a, b) => (a.pm25 > b.pm25) ? 1 : -1);
+      const middleValue = citySensorsSorted[Math.floor((citySensorsSorted.length - 1) / 2)]; // middle of array
+      sensorDataByCityFixed.push({...sensorDataByCity[i], sensors: [middleValue]});
+
+      // console.log('all sensors',citySensorsSorted.map((rec,id) => {
+      //   return(`city:${cityData.city} id:${id}  sensorId:${rec.sensorId} pm25:${rec.pm25} kmFromCenter: ${rec.kmFromCityCenter} temp:${rec.temperature} `);
+      // }))
+      // console.log('middle sensor',middleValue);middleValue
+    }
+
+
+
+
+
+    sensorDataByCityFixed.forEach(function (cityRec: any) {
       cityRec.sensors.forEach(function (sensorRec: any) {
         channelData.push({
           sensorId: sensorRec.sensorId,
@@ -193,6 +212,7 @@ export default async function retrieveAirQualityData(
         }
 
         try {
+          //const sensorIdLocal = channelData[i].sensorId;
           let url = `https://api.thingspeak.com/channels/${channelData[i].thingSpeakChannel}/feeds.json?api_key=${channelData[i].thingSpeakAuth}&average=60&round=2&days=${daysToGoBack}&results=8000`;
           //console.log("url:", url);
           const sensorThingSpeakResult: any = await axios.get(url);
@@ -210,8 +230,8 @@ export default async function retrieveAirQualityData(
         }
       }
 
-      for (let i = 0; i < sensorDataByCity.length; i++) {
-        const cityRec = sensorDataByCity[i];
+      for (let i = 0; i < sensorDataByCityFixed.length; i++) {
+        const cityRec = sensorDataByCityFixed[i];
         for (let j = 0; j < cityRec.sensors.length; j++) {
           let sensorRec = cityRec.sensors[j];
           sensorRec.sensorHistory = sensorTransform(
@@ -220,7 +240,7 @@ export default async function retrieveAirQualityData(
         }
       }
     }
-    returnData = sensorDataByCity;
+    returnData = sensorDataByCityFixed;
   } catch (e) {
     returnData = {
       error: {

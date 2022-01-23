@@ -66,6 +66,8 @@ typings/
 # dotenv environment variables file are included and should not have anything secret in them.
 #  just things like debugging, etc.  secret stuff should be either in github secrets or in the docker-compose script that
 #  launches the conatiner
+
+# put secret stuff in .env.local and it will not get checked in
 .env.local
 
 # next.js build output
