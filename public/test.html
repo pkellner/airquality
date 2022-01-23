@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="/style/bootstrap.min.css" rel="stylesheet" />
+    <link href="/style/fontawesome/css/all.css" rel="stylesheet" />
+    <link href="/style/style.css" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-icon-192x192.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="twitter:card" content="photo" />
+    <meta name="twitter:site" content="@pkellner" />
+    <meta name="twitter:creator" content="@pkellner" />
+    <meta
+      name="twitter:title"
+      content="Top United States cities air quality and temperature"
+    />
+    <meta
+      name="twitter:image"
+      content="https://airquality.peterkellner.net/images/airquality-250x150.png"
+    />
+    <meta name="twitter:image:width" content="250" />
+    <meta name="twitter:image:height" content="150" />
+    <meta
+      property="og:title"
+      content="Top United States cities air quality and temperature"
+    />
+    <meta name="image" property="og:image" content="[Image URL here]">
+    <meta
+      property="og:description"
+      content="Top United States cities air quality and temperature"
+    />
+    <meta property="og:url" content="https://airquality.peterkellner.net/images/airquality-250x150.png" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="next-head-count" content="2" />
+    <noscript data-n-css=""></noscript>
+    <script
+      defer=""
+      nomodule=""
+      src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"
+    ></script>
+    <script
+      src="/_next/static/chunks/webpack-1d18925153acdf30.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/framework-49d531080728bd77.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/main-9c868dd2c023c165.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/pages/_app-a3ea36d6530f8df7.js"
+      defer=""
+    ></script>
+    <script src="/_next/static/chunks/2-0684399942c993ed.js" defer=""></script>
+    <script
+      src="/_next/static/chunks/pages/index-5f00b075ff3a5719.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/iz323EA7qg73DTPhDPGb_/_buildManifest.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/iz323EA7qg73DTPhDPGb_/_ssgManifest.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/iz323EA7qg73DTPhDPGb_/_middlewareManifest.js"
+      defer=""
+    ></script>
+  </head>
+  <body>
+    <div id="__next">
+      <div class="container-fluid">
+        <div class="header-toolbar row">
+          <div>
+            <h3>Top United States cities air quality and temperature</h3>
+          </div>
+          <div class="selector">
+            <!--$--><select name="select" class="custom-select">
+              <option value="3">
+                Show Top
+                <!-- -->3<!-- -->
+                Cities
+              </option>
+              <option value="5" selected="">
+                Show Top
+                <!-- -->5<!-- -->
+                Cities
+              </option>
+              <option value="10">
+                Show Top
+                <!-- -->10<!-- -->
+                Cities
+              </option>
+              <option value="25">
+                Show Top
+                <!-- -->25<!-- -->
+                Cities
+              </option>
+              <option value="50">
+                Show Top
+                <!-- -->50<!-- -->
+                Cities
+              </option></select
+            ><!--/$-->
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid mt-4">
+        <div class="row">
+          <div class="col-sm-12 col-lg-3 col-md-6">
+            <!--$!-->
+            <div class="city">
+              <ul class="list-group">
+                <li class="city-list">
+                  <div class="row align-items-center">
+                    <div class="col-7">
+                      name - state<br /><i class="font-size-smaller"
+                        >Population: ---</i
+                      >
+                    </div>
+                    <div class="col-2"></div>
+                    <div class="col-3 align-item-right">
+                      <div class="tooltip-container">
+                        <div class="tooltip-box">
+                          <span class="tooltip-arrow"></span>
+                        </div>
+                        <div>
+                          <div class="circle-stack circle-stack-default">
+                            <span class="points-indicator-gray">
+                              <div></div
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <ul class="list-group">
+                <li class="city-list">
+                  <div class="row align-items-center">
+                    <div class="col-7">
+                      name - state<br /><i class="font-size-smaller"
+                        >Population: ---</i
+                      >
+                    </div>
+                    <div class="col-2"></div>
+                    <div class="col-3 align-item-right">
+                      <div class="tooltip-container">
+                        <div class="tooltip-box">
+                          <span class="tooltip-arrow"></span>
+                        </div>
+                        <div>
+                          <div class="circle-stack circle-stack-default">
+                            <span class="points-indicator-gray">
+                              <div></div
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <ul class="list-group">
+                <li class="city-list">
+                  <div class="row align-items-center">
+                    <div class="col-7">
+                      name - state<br /><i class="font-size-smaller"
+                        >Population: ---</i
+                      >
+                    </div>
+                    <div class="col-2"></div>
+                    <div class="col-3 align-item-right">
+                      <div class="tooltip-container">
+                        <div class="tooltip-box">
+                          <span class="tooltip-arrow"></span>
+                        </div>
+                        <div>
+                          <div class="circle-stack circle-stack-default">
+                            <span class="points-indicator-gray">
+                              <div></div
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <ul class="list-group">
+                <li class="city-list">
+                  <div class="row align-items-center">
+                    <div class="col-7">
+                      name - state<br /><i class="font-size-smaller"
+                        >Population: ---</i
+                      >
+                    </div>
+                    <div class="col-2"></div>
+                    <div class="col-3 align-item-right">
+                      <div class="tooltip-container">
+                        <div class="tooltip-box">
+                          <span class="tooltip-arrow"></span>
+                        </div>
+                        <div>
+                          <div class="circle-stack circle-stack-default">
+                            <span class="points-indicator-gray">
+                              <div></div
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <ul class="list-group">
+                <li class="city-list">
+                  <div class="row align-items-center">
+                    <div class="col-7">
+                      name - state<br /><i class="font-size-smaller"
+                        >Population: ---</i
+                      >
+                    </div>
+                    <div class="col-2"></div>
+                    <div class="col-3 align-item-right">
+                      <div class="tooltip-container">
+                        <div class="tooltip-box">
+                          <span class="tooltip-arrow"></span>
+                        </div>
+                        <div>
+                          <div class="circle-stack circle-stack-default">
+                            <span class="points-indicator-gray">
+                              <div></div
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!--/$-->
+          </div>
+          <div class="col-sm-12 col-lg-4 col-md-6">
+            <div class="city-details">
+              <h3>City → ...</h3>
+              <ul>
+                <li>
+                  <div class="fallback-background-color">
+                    <i>Temperature:</i> <i>--- F</i>
+                  </div>
+                </li>
+                <li>
+                  <div class="fallback-background-color">
+                    <h5>PM 2.5 10 Day History Stats</h5>
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Min</th>
+                            <th scope="col">Max</th>
+                            <th scope="col">Avg</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="tooltip-container">
+                                <div class="tooltip-box">
+                                  <span class="tooltip-arrow"></span>
+                                </div>
+                                <div>
+                                  <div
+                                    class="circle-stack circle-stack-default"
+                                  >
+                                    <span class="points-indicator-gray">
+                                      <div></div
+                                    ></span>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="tooltip-container">
+                                <div class="tooltip-box">
+                                  <span class="tooltip-arrow"></span>
+                                </div>
+                                <div>
+                                  <div
+                                    class="circle-stack circle-stack-default"
+                                  >
+                                    <span class="points-indicator-gray">
+                                      <div></div
+                                    ></span>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="tooltip-container">
+                                <div class="tooltip-box">
+                                  <span class="tooltip-arrow"></span>
+                                </div>
+                                <div>
+                                  <div
+                                    class="circle-stack circle-stack-default"
+                                  >
+                                    <span class="points-indicator-gray">
+                                      <div></div
+                                    ></span>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><b>--- F</b></td>
+                            <td><b>--- F</b></td>
+                            <td><b>--- F</b></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="fallback-background-color">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Time</th>
+                          <th>PM 2.5</th>
+                          <th>Temperature (F)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>.. hours previous</td>
+                          <td>
+                            <div class="tooltip-container">
+                              <div class="tooltip-box">
+                                <span class="tooltip-arrow"></span>
+                              </div>
+                              <div>
+                                <div class="circle-stack circle-stack-default">
+                                  <span class="points-indicator-gray">
+                                    <div></div
+                                  ></span>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td>---</td>
+                        </tr>
+                        <tr>
+                          <td>.. hours previous</td>
+                          <td>
+                            <div class="tooltip-container">
+                              <div class="tooltip-box">
+                                <span class="tooltip-arrow"></span>
+                              </div>
+                              <div>
+                                <div class="circle-stack circle-stack-default">
+                                  <span class="points-indicator-gray">
+                                    <div></div
+                                  ></span>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td>---</td>
+                        </tr>
+                        <tr>
+                          <td>.. hours previous</td>
+                          <td>
+                            <div class="tooltip-container">
+                              <div class="tooltip-box">
+                                <span class="tooltip-arrow"></span>
+                              </div>
+                              <div>
+                                <div class="circle-stack circle-stack-default">
+                                  <span class="points-indicator-gray">
+                                    <div></div
+                                  ></span>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td>---</td>
+                        </tr>
+                        <tr>
+                          <td>.. hours previous</td>
+                          <td>
+                            <div class="tooltip-container">
+                              <div class="tooltip-box">
+                                <span class="tooltip-arrow"></span>
+                              </div>
+                              <div>
+                                <div class="circle-stack circle-stack-default">
+                                  <span class="points-indicator-gray">
+                                    <div></div
+                                  ></span>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td>---</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-5 col-md-6">
+            <table class="table table-sm legend-table">
+              <caption class="text-center">
+                <strong>AQI Basics for Ozone and Particle Pollution</strong>
+              </caption>
+              <thead class="table-light">
+                <tr>
+                  <th scope="col">Daily AQI Color</th>
+                  <th scope="col">Levels of Concern</th>
+                  <th scope="col">Values of Index</th>
+                  <th scope="col">Description of Air Quality</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="circle-stack-good">
+                  <td>Green</td>
+                  <td id="good"><strong>Good</strong></td>
+                  <td><strong>0 to 50</strong></td>
+                  <td>
+                    Air quality is satisfactory, and air pollution poses little
+                    or no risk.
+                  </td>
+                </tr>
+                <tr class="circle-stack-moderate">
+                  <td>Yellow</td>
+                  <td id="mod"><strong>Moderate</strong></td>
+                  <td><strong>51 to 100</strong></td>
+                  <td>
+                    Air quality is acceptable. However, there may be a risk for
+                    some people, particularly those who are unusually sensitive
+                    to air pollution.
+                  </td>
+                </tr>
+                <tr class="circle-stack-sensitive">
+                  <td>Orange</td>
+                  <td id="sens">
+                    <strong>Unhealthy for Sensitive Groups</strong>
+                  </td>
+                  <td><strong>101 to 150</strong></td>
+                  <td>
+                    Members of sensitive groups may experience health effects.
+                    The general public is less likely to be affected.
+                  </td>
+                </tr>
+                <tr class="circle-stack-unhealthy">
+                  <td>Red</td>
+                  <td id="unh"><strong>Unhealthy</strong></td>
+                  <td><strong>151 to 200</strong></td>
+                  <td>
+                    Some members of the general public may experience health
+                    effects; members of sensitive groups may experience more
+                    serious health effects.
+                  </td>
+                </tr>
+                <tr class="circle-stack-very-unhealthy">
+                  <td>Purple</td>
+                  <td id="vunh"><strong>Very Unhealthy</strong></td>
+                  <td><strong>201 to 300</strong></td>
+                  <td>
+                    Health alert: The risk of health effects is increased for
+                    everyone.
+                  </td>
+                </tr>
+                <tr class="circle-stack-hazardous">
+                  <td>Maroon</td>
+                  <td id="haz"><strong>Hazardous</strong></td>
+                  <td><strong>301 and higher</strong></td>
+                  <td>
+                    Health warning of emergency conditions: everyone is more
+                    likely to be affected.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <hr />
+        <p class="text-center">
+          * Data provided using the (c) PurpleAir API. Though multiple sensors
+          are available for each city, this data is simply taking the closes
+          sensor to city center and using that. A better statistical approach
+          could be taken and may be in the future as there are often many
+          sensors in cities.
+        </p>
+        <p class="text-center">
+          ** For further information contact<!-- -->
+          <a href="https://peterkellner.net/"
+            >https://peterkellner.net/contact</a
+          >
+        </p>
+        .
+      </div>
+    </div>
+    <script id="__NEXT_DATA__" type="application/json">
+      {
+        "props": { "pageProps": {} },
+        "page": "/",
+        "query": {},
+        "buildId": "iz323EA7qg73DTPhDPGb_",
+        "nextExport": true,
+        "autoExport": true,
+        "isFallback": false,
+        "scriptLoader": []
+      }
+    </script>
+  </body>
+</html>
