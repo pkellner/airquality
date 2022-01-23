@@ -33,7 +33,7 @@ function ProcessDataAndRender() {
   return (
     <Suspense fallback={<CityDetailFallback />}>
       <div className="city-details">
-        <h3> City → {selectedCityName}</h3>
+        <h3> Location:  {selectedCityName}</h3>
         <ul>
           {/* <li></li> */}
           <li>
