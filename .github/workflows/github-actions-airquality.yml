@@ -38,7 +38,7 @@ jobs:
           DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
           STATIC_RENDER_MINIMIZE: ${{secrets.STATIC_RENDER_MINIMIZE}}
         run: |
-          RELEASEVERSION=4.0
+          RELEASEVERSION=4.1
 
           # RELEASEVERSION=$(cat version.txt) 
           # https://github.community/t/wanting-to-add-a-build-date-and-time-to-my-github-action/220185/6'
