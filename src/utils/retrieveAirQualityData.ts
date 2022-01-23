@@ -173,7 +173,7 @@ export default async function retrieveAirQualityData(
     for (let i=0;i<sensorDataByCity.length;i++) {
 
       const cityData = sensorDataByCity[i];
-      const citySensorsSorted = sensorDataByCity[i].sensors.sort((a, b) => (a.pm25 > b.pm25) ? 1 : -1);
+      const citySensorsSorted = sensorDataByCity[i].sensors.sort((a:any, b:any) => (a.pm25 > b.pm25) ? 1 : -1);
       const middleValue = citySensorsSorted[Math.floor((citySensorsSorted.length - 1) / 2)]; // middle of array
       sensorDataByCityFixed.push({...sensorDataByCity[i], sensors: [middleValue]});
 
