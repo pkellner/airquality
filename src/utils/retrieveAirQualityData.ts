@@ -19,11 +19,11 @@ export default async function retrieveAirQualityData(
   // now many cities to return in the JSON per city
   // later, it might be nice to do something like average and drop high and low a lot more sensors,
   // but to keep this demo not crazy complicated, we are just using the closest sensor to city center.
-  const SENSORSPERCITY = 1;
+  const SENSORSPERCITY = 7;
 
   // values used to throttle API calls for PurpleAir data
   const DELAYBETWEENRESTCALLS = 300; // ms
-  const DELAYEVERY20 = 4000;
+  const DELAYEVERY20 = 400;
 
   const cities =
     singleCityToProcess === undefined || singleCityToProcess.length === 0
@@ -180,6 +180,8 @@ export default async function retrieveAirQualityData(
         });
       });
     });
+
+
 
     if (processHistory === true) {
       let cnt = 0;

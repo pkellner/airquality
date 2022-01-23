@@ -11,8 +11,8 @@ export const EXCLUDESENSORIDS = [126335];
 export const CITYCOUNTCHOICES = [3, 5, 10, 25, 50];
 export const DEFAULTCITYCOUNT = 5;
 export const HISTORYHOURSTOSHOW = 4;
-export const SERVERRESTDELAYMINMS = process?.env?.SERVERRESTDELAYMINMS ?? 2000;
-export const SERVERRESTDELAYMAXMS = process?.env?.SERVERRESTDELAYMAXMS ?? 7000;
+export const SERVERRESTDELAYMINMS = process?.env?.SERVERRESTDELAYMINMS ?? 200;
+export const SERVERRESTDELAYMAXMS = process?.env?.SERVERRESTDELAYMAXMS ?? 300;
 
 // put key in .env.loal
 export const PURPLEAIR_APIKEY =
