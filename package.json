@@ -1,0 +1,25 @@
+{
+  "name": "my-app",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "memory-cache": "^0.2.0",
+    "next": "12.0.7",
+    "react": "^18.0.0-rc.0",
+    "react-dom": "^18.0.0-rc.0",
+    "swr": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "16.11.11",
+    "@types/react": "17.0.37",
+    "eslint": "^7.24.0",
+    "eslint-config-next": "^12.0.7",
+    "typescript": "4.5.2"
+  }
+}
