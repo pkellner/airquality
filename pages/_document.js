@@ -87,16 +87,14 @@ class MyDocument extends Document {
           <meta name="msapplication-TileColor" content="#ffffff" />
           <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
           <meta name="theme-color" content="#ffffff" />
-          
-          
-  
+
           <meta name="twitter:card" content="photo" />
           <meta name="twitter:site" content="@pkellner" />
           <meta name="twitter:creator" content="@pkellner" />
-  
+
           <meta
             name="twitter:title"
-            content="Top United States cities air quality and temperature. Data source are the tens of thousands of sensors from Purple Air. Top 7 in each city averaged together."
+            content="Most to Least Polluted United States cities air quality and temperature. Data source are the tens of thousands of sensors from Purple Air. Top 7 in each city averaged together."
           />
           <meta
             name="twitter:image"
@@ -104,23 +102,43 @@ class MyDocument extends Document {
           />
           <meta name="twitter:image:width" content="250" />
           <meta name="twitter:image:height" content="150" />
-  
+
           <meta
             property="og:title"
-            content="Top United States cities air quality and temperature"
+            content="Most Pollutest United States cities air quality and temperature"
           />
           <meta
             property="og:description"
-            content="Top United States cities air quality and temperature"
+            content="Most Polluted United States cities air quality and temperature"
           />
           <meta
             property="og:url"
             content="https://airquality.peterkellner.net"
           />
-  
-          <meta name="image" property="og:image" content="https://airquality.peterkellner.net/images/airquality-350x220.png"/>
-          
-          
+
+          <meta
+            name="image"
+            property="og:image"
+            content="https://airquality.peterkellner.net/images/airquality-350x220.png"
+          />
+
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-123456789"
+          ></script>
+
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-YKJ5WY4MH2', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
         </Head>
         <body>
           <Main />
