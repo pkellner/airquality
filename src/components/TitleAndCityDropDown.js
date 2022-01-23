@@ -5,7 +5,7 @@ export function TitleAndCityDropDown() {
     <div className="container-fluid">
       <div className="header-toolbar row">
         <div>
-          <h3>Top United States cities air quality and temperature</h3>
+          <h3>Most Polluted United States cities, air quality and temperature</h3>
         </div>
         <div className="selector">
           <CityMaxCntDropDownList />
