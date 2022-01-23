@@ -87,6 +87,38 @@ class MyDocument extends Document {
           <meta name="msapplication-TileColor" content="#ffffff" />
           <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
           <meta name="theme-color" content="#ffffff" />
+          
+          
+  
+          <meta name="twitter:card" content="photo" />
+          <meta name="twitter:site" content="@pkellner" />
+          <meta name="twitter:creator" content="@pkellner" />
+  
+          <meta
+            name="twitter:title"
+            content="Top United States cities air quality and temperature"
+          />
+          <meta
+            name="twitter:image"
+            content="https://airquality.peterkellner.net/images/airquality-250x150.png"
+          />
+          <meta name="twitter:image:width" content="250" />
+          <meta name="twitter:image:height" content="150" />
+  
+          <meta
+            property="og:title"
+            content="Top United States cities air quality and temperature"
+          />
+          <meta
+            property="og:description"
+            content="Top United States cities air quality and temperature"
+          />
+          <meta
+            property="og:url"
+            content="https://airquality.peterkellner.net"
+          />
+          
+          
         </Head>
         <body>
           <Main />
