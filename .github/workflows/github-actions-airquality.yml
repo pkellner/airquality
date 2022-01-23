@@ -29,7 +29,7 @@ jobs:
         uses: tj-actions/changed-files@v9.3
         with:  # UPDATE
           files: |
-            github-actions-airquality.yml
+            github-actions-actions-airquality.yml
 
       - name: Run step if any of the listed files above change    # UPDATE
         if: steps.changed-files-specific.outputs.any_changed == 'true'
