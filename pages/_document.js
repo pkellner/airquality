@@ -96,7 +96,7 @@ class MyDocument extends Document {
   
           <meta
             name="twitter:title"
-            content="Top United States cities air quality and temperature"
+            content="Top United States cities air quality and temperature. Data source are the tens of thousands of sensors from Purple Air. Top 7 in each city averaged together."
           />
           <meta
             name="twitter:image"
