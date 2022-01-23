@@ -118,7 +118,7 @@ class MyDocument extends Document {
             content="https://airquality.peterkellner.net"
           />
   
-          <meta name="image" property="og:image" content="https://airquality.peterkellner.net/images/airquality-250x150.png"/>
+          <meta name="image" property="og:image" content="https://airquality.peterkellner.net/images/airquality-350x220.png"/>
           
           
         </Head>
