@@ -9,7 +9,7 @@ export const EXCLUDESENSORIDS = [126335];
 
 // values for dropdown list
 export const CITYCOUNTCHOICES = [3, 5, 10, 25, 50];
-export const DEFAULTCITYCOUNT = 5;
+export const DEFAULTCITYCOUNT = 3;
 export const HISTORYHOURSTOSHOW = 4;
 export const SERVERRESTDELAYMINMS = process?.env?.SERVERRESTDELAYMINMS ?? 200;
 export const SERVERRESTDELAYMAXMS = process?.env?.SERVERRESTDELAYMAXMS ?? 300;

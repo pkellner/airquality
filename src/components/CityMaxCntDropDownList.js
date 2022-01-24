@@ -9,7 +9,7 @@ export default function CityMaxCntDropDownList() {
     <Suspense
       fallback={
         <div>
-          Loading With Suspense Fallback 3....(CityMaxCntDropDownList.js)...
+          Loading With Suspense Fallback ....(CityMaxCntDropDownList.js)...
         </div>
       }
     >
