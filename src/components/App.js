@@ -1,15 +1,16 @@
 import TopUsCities from "./TopUsCities";
-import { fetcher } from "../utils/fetcher";
 import { SWRConfig } from "swr";
 import { CityProvider } from "../contexts/CityContext";
+import {fetcher} from "../utils/fetcher";
 
-function App() {
+function App({fallback}) {
   return (
     <>
       <SWRConfig
         value={{
-          fetcher,
           suspense: true,
+          fallback,
+          fetcher
         }}
       >
         <CityProvider>

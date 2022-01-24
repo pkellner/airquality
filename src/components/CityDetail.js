@@ -11,7 +11,7 @@ import { useContext, Suspense } from "react";
 export const CityDetailFallback = () => {
   return (
     <div className="city-details">
-      <h3> City → ...</h3>
+      <h3 className="fallback-background-color">...</h3>
       <ul>
         {/* <li></li> */}
         <li><TemperatureDisplayFallback /></li>
