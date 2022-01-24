@@ -22,10 +22,17 @@ export async function getServerSideProps(context: any) {
   // temperature does not seem to be cached
 
   return {
+    props: {}
+  };
+
+  // for now, leave it without serverside so it loads fast.
+  //  maybe would need cron job later to have it refresh every 10 minutes to keep data accurate, otherwise, first load would always be wrong
+
+  return {
     props: {
       fallback: {
-        "/api/data/cities?count=3": citiesData,
-        [unstable_serialize(temperatureUrl)]: temperatureData,
+        ["/api/data/cities?count=3"]: citiesData,
+        [unstable_serialize(temperatureUrl)]: temperatureData, // does not seem to work though ssr data on page looks right
       },
     },
   };
