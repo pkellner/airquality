@@ -21,6 +21,14 @@ const securityHeaders = [
     key: 'Referrer-Policy',
     value: 'origin-when-cross-origin',
   },
+  {
+    key: 'Content-Security-Policy',
+    value: 'default-src \'self\'; img-src https://*; child-src \'none\';',
+  },
+  {
+    key: 'X-XSS-Protection',
+    value: '1; mode=block',
+  },
 ];
 
 const cloudFrontCdn =
@@ -28,6 +36,8 @@ const cloudFrontCdn =
     ? process.env.NEXT_PUBLIC_CLOUDFRONTCDN
     : '';
 
+
+// https://vercel.com/support/articles/how-to-enable-cors#enabling-cors-in-a-single-node.js-serverless-function
 const allowCors = fn => async (req, res) => {
   res.setHeader('Access-Control-Allow-Credentials', true)
   res.setHeader('Access-Control-Allow-Origin', '*')
