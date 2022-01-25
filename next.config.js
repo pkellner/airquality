@@ -21,10 +21,10 @@ const securityHeaders = [
     key: 'Referrer-Policy',
     value: 'origin-when-cross-origin',
   },
-  {
-    key: 'Content-Security-Policy',
-    value: 'default-src \'self\'; img-src https://*; child-src \'none\';',
-  },
+  // {
+  //   key: 'Content-Security-Policy',
+  //   value: 'default-src \'self\'; img-src https://*; child-src \'none\';',
+  // },
   {
     key: 'X-XSS-Protection',
     value: '1; mode=block',
