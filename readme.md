@@ -8,4 +8,4 @@ Currently, this deploys to https://airquality.peterkellner.net/
 
 This code is written using the latest bits from the React team and includes extensive use of Suspense.
 
-# Uses PurpleAir API for the data source of air quality levels and temperatures.
+* Uses PurpleAir API for the data source of air quality levels and temperatures.
