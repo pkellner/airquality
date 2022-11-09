@@ -59,7 +59,7 @@ module.exports = {
   reactStrictMode: true,
   
   crossOrigin:'anonymous',
-  assetPrefix: cloudFrontCdn,
+  //assetPrefix: cloudFrontCdn ?? "",
   async headers() {
     return [
       {
