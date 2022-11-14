@@ -47,7 +47,9 @@ function LastHoursList({ currentPage }) {
   url += `?cityId=${selectedCityId}&recordsToSkip=${recordsToSkip}&recordsToReturn=${recordsToReturn}&incrementHours=${incrementHours}`;
   const { data, error } = useSwr(url);
 
-  const sensorHistoryArray = data?.map((rec) => {
+  if (!data || data.length === 0) return <div>loading...</div>;
+
+  const sensorHistoryArray = JSON.parse(data)?.map((rec) => {
     return {
       pm25: rec.pm25,
       created: rec.created,
@@ -134,7 +136,7 @@ export default function LastHoursDataDisplay() {
   return (
     <div>
       {/*<Suspense fallback={<LastHoursDataDisplayFallback />}>*/}
-        <LastHoursList currentPage={currentPage} />
+      <LastHoursList currentPage={currentPage} />
       {/*</Suspense>*/}
       <div className="container-fluid">
         <PagingOffsetLimitControl

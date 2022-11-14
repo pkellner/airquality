@@ -58,6 +58,10 @@ const allowCors = fn => async (req, res) => {
 module.exports = {
   reactStrictMode: true,
   
+  experimental: {
+    forceSwcTransforms: true,
+  },
+  
   crossOrigin:'anonymous',
   //assetPrefix: cloudFrontCdn ?? "",
   async headers() {

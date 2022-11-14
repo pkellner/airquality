@@ -41,7 +41,7 @@ function CityListItems() {
     const { data, error } = useSwr(
       `/api/data/cities?count=${cityMax}`,
       fetcher,
-      { suspense: true }
+      { suspense: true, fallbackData: [] }
     );
 
     useEffect(() => {
@@ -54,10 +54,12 @@ function CityListItems() {
         });
       }
     }, [data, setSelectedCityId, setSelectedCityName, setSelectedStateName]);
+    
+    if (!data || data.length === 0) return <div>no data</div>
 
     return (
       <div className="city">
-        {data
+        {JSON.parse(data)
           ?.sort((a, b) => {
             if (a.pm25 > b.pm25) return -1;
             if (a.pm25 < b.pm25) return 1;
@@ -65,7 +67,7 @@ function CityListItems() {
           })
           .map(function (rec, index) {
             return (
-              <ul key={rec.id} className="list-group">
+              <ul key={rec.id} className="list-group" key={rec.id}>
                 <li
                   className={
                     rec.id === selectedCityId ||

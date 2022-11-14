@@ -29,7 +29,7 @@ export function CityLinkButton({ cityRec, isPending = false }) {
         <h4>{cityRec.city} - {cityRec.state}</h4>
         <i className="font-size-smaller">
           Population:
-          {cityRec.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+          {cityRec.population?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
         </i>
         {ISDEBUGGING === true ? (
           <div>{JSON.stringify(cityRec, 4, `\t`)}</div>
