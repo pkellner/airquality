@@ -67,7 +67,7 @@ function CityListItems() {
           })
           .map(function (rec, index) {
             return (
-              <ul key={rec.id} className="list-group" key={rec.id}>
+              <ul key={rec.id} className="list-group" >
                 <li
                   className={
                     rec.id === selectedCityId ||
