@@ -1,10 +1,8 @@
 import axios from "axios";
 import citiesArray from "../../data/usCities.json";
-import {EXCLUDESENSORIDS, PURPLEAIR_APIKEY} from "./constants";
+import { EXCLUDESENSORIDS, PURPLEAIR_APIKEY } from "./constants";
 import getBoundingBox from "./getBoundingBox";
 import getDistanceFromLatLonInKm from "./getDistanceFromLatLonInKm";
-
-
 
 export default async function retrieveAirQualityData(
   processHistory: any,
@@ -89,14 +87,32 @@ export default async function retrieveAirQualityData(
       },
     });
 
+    //const xx = JSON.parse(res);
+    const xx = res;
+    //console.log("xx.data:",xx.data.data.length)
+
+    //console.log("res:",res.data.length, res)
+
+    // const x = JSON.parse(res);
+    // console.log(x);
+
+
+    //console.log("retreiveAirQualityData: res:",res?.data);
+
+    // const resData =
+    //   res && res.data && res.data.length > 0 ? JSON.parse(res?.data) : [];
+
+    const resData = xx.data.data;
+
     // @ts-ignore
-    allSensorsData = res.data.data.filter((rec) => {
+    allSensorsData = resData.filter((rec) => {
       // each rec is an array where the first element in the array is the sensor id. not rec.sensorId like expected.
-      const isBadSensor = EXCLUDESENSORIDS.includes(rec[0])
+      const isBadSensor = EXCLUDESENSORIDS.includes(rec[0]);
       return !isBadSensor;
     });
 
     cities.forEach(function (city: any) {
+      //console.log(city);
       const { lat_min, lat_max, lon_min, lon_max } = getBoundingBox(
         city?.latitude,
         city?.longitude,
@@ -104,11 +120,17 @@ export default async function retrieveAirQualityData(
       );
       let sensorArray: any = [];
       allSensorsData.forEach(function (sensor: any) {
+        //console.log("sensor:",sensor)
         const sensorId = sensor[0];
-        const sensorLatitude = sensor[1];
-        const sensorLongitude = sensor[2];
+        const sensorLatitude = sensor[4];
+        const sensorLongitude = sensor[5];
         const locationType = sensor[3] ?? 1; // 0 means outside, 1 means inside
-        const sensorName = sensor[4] ?? "";
+        const sensorName = sensor[2] ?? "";
+        // const sensorLatitude = sensor[1];
+        // const sensorLongitude = sensor[2];
+        // const locationType = sensor[3] ?? 1; // 0 means outside, 1 means inside
+        // const sensorName = sensor[4] ?? "";
+        //console.log("sensorName:",sensorName);
         if (
           !sensorName?.toLowerCase().includes("inside") &&
           locationType === 0 &&
@@ -170,22 +192,23 @@ export default async function retrieveAirQualityData(
 
     // NEED TO FIX SENSORDATA TO 1 REC
     let sensorDataByCityFixed = [];
-    for (let i=0;i<sensorDataByCity.length;i++) {
-
+    for (let i = 0; i < sensorDataByCity.length; i++) {
       const cityData = sensorDataByCity[i];
-      const citySensorsSorted = sensorDataByCity[i].sensors.sort((a:any, b:any) => (a.pm25 > b.pm25) ? 1 : -1);
-      const middleValue = citySensorsSorted[Math.floor((citySensorsSorted.length - 1) / 2)]; // middle of array
-      sensorDataByCityFixed.push({...sensorDataByCity[i], sensors: [middleValue]});
+      const citySensorsSorted = sensorDataByCity[i].sensors.sort(
+        (a: any, b: any) => (a.pm25 > b.pm25 ? 1 : -1)
+      );
+      const middleValue =
+        citySensorsSorted[Math.floor((citySensorsSorted.length - 1) / 2)]; // middle of array
+      sensorDataByCityFixed.push({
+        ...sensorDataByCity[i],
+        sensors: [middleValue],
+      });
 
       // console.log('all sensors',citySensorsSorted.map((rec,id) => {
       //   return(`city:${cityData.city} id:${id}  sensorId:${rec.sensorId} pm25:${rec.pm25} kmFromCenter: ${rec.kmFromCityCenter} temp:${rec.temperature} `);
       // }))
       // console.log('middle sensor',middleValue);middleValue
     }
-
-
-
-
 
     sensorDataByCityFixed.forEach(function (cityRec: any) {
       cityRec.sensors.forEach(function (sensorRec: any) {
@@ -199,8 +222,6 @@ export default async function retrieveAirQualityData(
         });
       });
     });
-
-
 
     if (processHistory === true) {
       let cnt = 0;

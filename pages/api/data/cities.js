@@ -23,7 +23,9 @@ export async function getCitiesData(count) {
           count,
           DAYSTOGOBACK
         );
-        cache.put(cacheKey, data, parseInt(MEMORYCACHEDELAYMS)); // ms
+        console.log("/api/cities:data:",data.length,data);
+        
+        cache.put(cacheKey, data ? data : [], parseInt(MEMORYCACHEDELAYMS)); // ms
         return data;
       }
     };

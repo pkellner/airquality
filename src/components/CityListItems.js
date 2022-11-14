@@ -55,7 +55,7 @@ function CityListItems() {
       }
     }, [data, setSelectedCityId, setSelectedCityName, setSelectedStateName]);
     
-    if (!data || data.length === 0) return <div>no data</div>
+    if (!data || data.length === 0) return <div>loading...</div>
 
     return (
       <div className="city">
